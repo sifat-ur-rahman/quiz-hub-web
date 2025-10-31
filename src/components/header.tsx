@@ -50,7 +50,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 hover:bg-secondary rounded-lg transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-primary rounded-lg transition-colors"
           >
             {isOpen ? (
               <FiX className="w-6 h-6" />
@@ -62,20 +62,20 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in-up">
+          <div className="md:hidden mt-4 pb-4 space-y-3 ">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                className="block px-4 py-2 text-foreground hover:bg-secondary rounded transition-colors"
               >
                 {link.label}
               </Link>
             ))}
-            <button className="w-full px-4 py-2 text-foreground hover:text-primary transition-colors">
+            <button className="w-full px-4 py-2 border border-primary/50 hover:bg-primary/5  rounded-sm text-foreground hover:text-primary transition-colors">
               Sign In
             </button>
-            <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold">
+            <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-sm hover:bg-primary/90 transition-all duration-300 font-semibold">
               Get Started
             </button>
           </div>
