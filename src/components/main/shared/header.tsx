@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiMenu, FiX, FiBook } from "react-icons/fi";
@@ -17,11 +18,17 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 animate-fade-in-up">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <FiBook className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <span className="text-2xl font-bold text-foreground">QuizHub</span>
+          <Link
+            href="/"
+            className="flex items-center w-[190px] gap-2 animate-fade-in-up"
+          >
+            <Image
+              src="/logo-black.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="w-full "
+            />
           </Link>
 
           {/* Desktop Navigation */}
