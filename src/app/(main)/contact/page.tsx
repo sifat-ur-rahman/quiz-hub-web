@@ -48,7 +48,7 @@ export default function ContactPage() {
             </h2>
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-14 h-14  rounded-lg flex items-center justify-center shrink-0">
                   <FiMail className="w-6 h-6 text-emerald-600" />
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-14 h-14  rounded-lg flex items-center justify-center shrink-0">
                   <FiPhone className="w-6 h-6 text-teal-600" />
                 </div>
                 <div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-14 h-14  rounded-lg flex items-center justify-center shrink-0">
                   <FiMapPin className="w-6 h-6 text-cyan-600" />
                 </div>
                 <div>
