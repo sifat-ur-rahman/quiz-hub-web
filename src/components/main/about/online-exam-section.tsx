@@ -1,78 +1,71 @@
-"use client";
+import { FiCheckCircle, FiClock, FiLock } from "react-icons/fi";
 
-import { FiLock, FiClock, FiCheckCircle } from "react-icons/fi";
-
-export default function OnlineExamSection() {
+function OnlineExamSection() {
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-slate-50 to-slate-100">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Secure Online Exams
-          </h2>
-          <p className="text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto">
-            Conduct fair and secure online examinations with advanced proctoring
-            and monitoring features.
-          </p>
-        </div>
-
-        {/* Circular Feature Layout */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="group animate-fade-in-up">
-            <div className="relative">
-              <div className="relative  rounded-lg p-8 border border-slate-700 group-hover:border-amber-500 bg-primary-foreground transition-colors  min-h-64">
-                <div className="w-16 h-16 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-500/40 transition-colors">
-                  <FiLock className="w-8 h-8 text-amber-400" />
-                </div>
-                <h3 className="text-xl font-bold text-black  mb-3">
-                  Advanced Proctoring
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  AI-powered monitoring and secure exam environment to ensure
-                  integrity.
-                </p>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className=" mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              Secure Online Exams
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Conduct fair and secure online examinations with advanced
+              proctoring and monitoring features.
+            </p>
           </div>
 
-          <div
-            className="group animate-fade-in-up"
-            style={{ animationDelay: "100ms" }}
-          >
-            <div className="relative">
-              <div className="relative bg-primary-foreground rounded-lg p-8 border border-slate-700 group-hover:border-cyan-500 transition-colors  min-h-64">
-                <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/40 transition-colors">
-                  <FiClock className="w-8 h-8 text-cyan-400" />
+          {/* Stacked Feature Boxes */}
+          <div className="space-y-4">
+            <div className="p-6 bg-linear-to-r from-blue-50 to-blue-100 rounded-xl border-l-4 border-blue-600 hover:shadow-lg transition-shadow animate-fade-in-up">
+              <div className="flex items-start gap-4">
+                <FiLock className="w-6 h-6 text-blue-600 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    Advanced Proctoring
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    AI-powered monitoring and secure exam environment to ensure
+                    integrity.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-black mb-3">
-                  Flexible Scheduling
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  Schedule exams at convenient times with customizable duration
-                  options.
-                </p>
               </div>
             </div>
-          </div>
 
-          <div
-            className="group animate-fade-in-up"
-            style={{ animationDelay: "200ms" }}
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-linear-to-r from-green-500 to-emerald-500 rounded-full blur-xl opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
-              <div className="relative bg-slate-800 rounded-full p-8 border border-slate-700 group-hover:border-green-500 transition-colors flex flex-col items-center justify-center min-h-64">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-500/40 transition-colors">
-                  <FiCheckCircle className="w-8 h-8 text-green-400" />
+            <div
+              className="p-6 bg-linear-to-r from-purple-50 to-purple-100 rounded-xl border-l-4 border-purple-600 hover:shadow-lg transition-shadow animate-fade-in-up"
+              style={{ animationDelay: "100ms" }}
+            >
+              <div className="flex items-start gap-4">
+                <FiClock className="w-6 h-6 text-purple-600 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    Flexible Scheduling
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Schedule exams at convenient times with customizable
+                    duration options.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-white text-center mb-3">
-                  Detailed Results
-                </h3>
-                <p className="text-slate-300 text-center text-sm">
-                  Comprehensive performance analytics and detailed reports for
-                  progress tracking.
-                </p>
+              </div>
+            </div>
+
+            <div
+              className="p-6 bg-linear-to-r from-pink-50 to-pink-100 rounded-xl border-l-4 border-pink-600 hover:shadow-lg transition-shadow animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              <div className="flex items-start gap-4">
+                <FiCheckCircle className="w-6 h-6 text-pink-600 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    Detailed Results
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Comprehensive performance analytics and detailed reports for
+                    progress tracking.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -81,3 +74,5 @@ export default function OnlineExamSection() {
     </section>
   );
 }
+
+export default OnlineExamSection;
