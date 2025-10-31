@@ -1,0 +1,6 @@
+{
+  "postman.settings.dotenv-detection-notification-visibility": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#006a20"
+  }
+}
