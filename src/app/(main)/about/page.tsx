@@ -1,5 +1,7 @@
 "use client";
 
+import Features from "@/src/components/main/about/features";
+import OnlineExamSection from "@/src/components/main/about/online-exam-section";
 import { FiTarget, FiEye, FiHeart } from "react-icons/fi";
 
 export default function AboutPage() {
@@ -91,6 +93,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <Features />
+      <OnlineExamSection />
     </div>
   );
 }

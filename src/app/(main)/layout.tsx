@@ -1,5 +1,5 @@
-import Footer from "@/src/components/footer";
-import Header from "@/src/components/header";
+import Footer from "@/src/components/main/shared/footer";
+import Header from "@/src/components/main/shared/header";
 import React from "react";
 
 const RootLayout = ({
