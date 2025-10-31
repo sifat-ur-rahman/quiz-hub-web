@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight, FiAward } from "react-icons/fi";
 
@@ -9,93 +10,147 @@ export default function BestStudentsSection() {
   const topStudents = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Afsana Rahman",
       score: 98.5,
       courses: 12,
-      avatar: "👩‍🎓",
+      avatar: "/best-students/14.png", // woman
       badge: "gold",
       streak: 45,
     },
     {
       id: 2,
-      name: "Alex Chen",
+      name: "Arif Chowdhury",
       score: 97.2,
       courses: 10,
-      avatar: "👨‍🎓",
+      avatar: "/best-students/02.png", // man
       badge: "silver",
       streak: 38,
     },
     {
       id: 3,
-      name: "Emma Davis",
+      name: "Rafiul Islam",
       score: 96.8,
       courses: 11,
-      avatar: "👩‍🎓",
+      avatar: "/best-students/06.png", // man
       badge: "bronze",
       streak: 42,
     },
     {
       id: 4,
-      name: "Michael Brown",
+      name: "Maliha Ahmed",
       score: 95.3,
       courses: 9,
-      avatar: "👨‍🎓",
+      avatar: "/best-students/04.png", // woman
       badge: "star",
       streak: 35,
     },
     {
       id: 5,
-      name: "Lisa Anderson",
+      name: "Nusrat Jahan",
       score: 94.7,
       courses: 8,
-      avatar: "👩‍🎓",
+      avatar: "/best-students/05.png", // woman
       badge: "star",
       streak: 32,
     },
     {
       id: 6,
-      name: "James Wilson",
+      name: "Tareq Hasan",
       score: 93.9,
       courses: 10,
-      avatar: "👨‍🎓",
+      avatar: "/best-students/06.png", // man
       badge: "star",
       streak: 30,
     },
     {
       id: 7,
-      name: "Olivia Martinez",
+      name: "Mahmudul Karim",
       score: 92.5,
       courses: 7,
-      avatar: "👩‍🎓",
+      avatar: "/best-students/07.png", // man
       badge: "star",
       streak: 28,
     },
     {
       id: 8,
-      name: "David Lee",
+      name: "Sakib Rahman",
       score: 91.8,
       courses: 9,
-      avatar: "👨‍🎓",
+      avatar: "/best-students/08.png", // man
       badge: "star",
       streak: 25,
     },
     {
       id: 9,
-      name: "Sophie Taylor",
+      name: "Tanvir Alam",
       score: 90.6,
       courses: 8,
-      avatar: "👩‍🎓",
+      avatar: "/best-students/09.png", // man
       badge: "star",
       streak: 22,
     },
     {
       id: 10,
-      name: "Noah Garcia",
+      name: "Nayeem Uddin",
       score: 89.4,
       courses: 7,
-      avatar: "👨‍🎓",
+      avatar: "/best-students/10.png", // man
       badge: "star",
       streak: 20,
+    },
+    {
+      id: 11,
+      name: "Rashed Khan",
+      score: 91.8,
+      courses: 9,
+      avatar: "/best-students/11.png", // man
+      badge: "star",
+      streak: 25,
+    },
+    {
+      id: 12,
+      name: "Fahim Ahmed",
+      score: 90.6,
+      courses: 8,
+      avatar: "/best-students/12.png", // man
+      badge: "star",
+      streak: 22,
+    },
+    {
+      id: 13,
+      name: "Sumaiya Akter",
+      score: 89.4,
+      courses: 7,
+      avatar: "/best-students/03.png", // woman
+      badge: "star",
+      streak: 20,
+    },
+    {
+      id: 14,
+      name: "Nafisa Haque",
+      score: 88.9,
+      courses: 7,
+      avatar: "/best-students/01.png", // woman
+      badge: "star",
+      streak: 19,
+    },
+    {
+      id: 15,
+      name: "Farhana Islam",
+      score: 87.6,
+      courses: 7,
+      avatar: "/best-students/03.png", // woman
+      badge: "star",
+      streak: 18,
+    },
+    {
+      id: 17,
+      name: "Aminul Hoque",
+      score: 86.4,
+      courses: 7,
+      avatar: "/best-students/09.png", // man
+      badge: "star",
+      streak: 17,
     },
   ];
 
@@ -158,8 +213,14 @@ export default function BestStudentsSection() {
 
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">
-                    <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                      {student.avatar}
+                    <div className="w-24 h-24 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={student.avatar}
+                        alt={student.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
 
