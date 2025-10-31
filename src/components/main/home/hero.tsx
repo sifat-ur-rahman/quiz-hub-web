@@ -1,7 +1,7 @@
-"use client"
-
-import { FiArrowRight } from "react-icons/fi"
-import { MdAutoAwesome } from "react-icons/md"
+"use client";
+import CountUp from "react-countup";
+import { FiArrowRight } from "react-icons/fi";
+import { MdAutoAwesome } from "react-icons/md";
 
 export default function Hero() {
   return (
@@ -14,7 +14,9 @@ export default function Hero() {
         <div className="space-y-6 animate-fade-in-up max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full">
             <MdAutoAwesome className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Welcome to QuizHub</span>
+            <span className="text-sm font-semibold text-primary">
+              Welcome to QuizHub
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
@@ -23,8 +25,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
-            QuizHub is a comprehensive platform designed for educators and students. Create engaging quizzes, manage
-            assessments, and track progress all in one place.
+            QuizHub is a comprehensive platform designed for educators and
+            students. Create engaging quizzes, manage assessments, and track
+            progress all in one place.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -32,28 +35,53 @@ export default function Hero() {
               Start Learning
               <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all duration-300">
-              Watch Demo
-            </button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 pt-8">
             <div>
-              <p className="text-2xl font-bold text-primary">10K+</p>
+              <p className="text-2xl font-bold text-primary">
+                {" "}
+                <CountUp
+                  enableScrollSpy
+                  duration={5}
+                  separator=""
+                  className="counter"
+                  end={10}
+                />
+                K+
+              </p>
               <p className="text-sm text-muted-foreground">Active Users</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-primary">5K+</p>
+              <p className="text-2xl font-bold text-primary">
+                <CountUp
+                  enableScrollSpy
+                  duration={5}
+                  separator=""
+                  className="counter"
+                  end={5}
+                />
+                K+
+              </p>
               <p className="text-sm text-muted-foreground">Quizzes Created</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-primary">98%</p>
+              <p className="text-2xl font-bold text-primary">
+                <CountUp
+                  enableScrollSpy
+                  duration={5}
+                  separator=""
+                  className="counter"
+                  end={98}
+                />
+                %
+              </p>
               <p className="text-sm text-muted-foreground">Satisfaction</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
