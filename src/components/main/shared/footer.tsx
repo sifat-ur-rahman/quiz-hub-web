@@ -1,5 +1,3 @@
-"use client";
-
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { FaTwitter, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { FiBook } from "react-icons/fi";
@@ -26,46 +24,7 @@ export default function Footer() {
               solutions.
             </p>
           </div>
-
-          {/* Product */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Product</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
-                  Security
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
-                  Roadmap
-                </a>
-              </li>
-            </ul>
-          </div>
-
+          <div></div>
           {/* Company */}
           <div className="space-y-4">
             <h4 className="font-semibold text-lg">Company</h4>
@@ -111,21 +70,21 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <FiMail className="w-4 h-4" />
-                <a
+                <Link
                   href="mailto:info@quizhub.com"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   info@quizhub.com
-                </a>
+                </Link>
               </li>
               <li className="flex items-center gap-2">
                 <FiPhone className="w-4 h-4" />
-                <a
+                <Link
                   href="tel:+1234567890"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   +1 (234) 567-890
-                </a>
+                </Link>
               </li>
               <li className="flex items-start gap-2">
                 <FiMapPin className="w-4 h-4 mt-0.5" />
@@ -148,52 +107,52 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            <a
+            <Link
               href="#"
               className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
             >
               <FaTwitter className="w-5 h-5" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
             >
               <FaLinkedin className="w-5 h-5" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
             >
               <FaGithub className="w-5 h-5" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
             >
               <FaFacebook className="w-5 h-5" />
-            </a>
+            </Link>
           </div>
 
           {/* Legal Links */}
           <div className="flex items-center gap-4 text-sm">
-            <a
+            <Link
               href="#"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
               Privacy
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
               Terms
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
               Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>

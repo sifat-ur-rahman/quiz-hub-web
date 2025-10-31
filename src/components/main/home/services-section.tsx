@@ -1,6 +1,4 @@
-"use client"
-
-import { FiCode, FiUsers, FiBarChart2, FiHeadphones } from "react-icons/fi"
+import { FiCode, FiUsers, FiBarChart2, FiHeadphones } from "react-icons/fi";
 
 export default function ServicesSection() {
   const services = [
@@ -21,16 +19,18 @@ export default function ServicesSection() {
     {
       icon: FiBarChart2,
       title: "Advanced Analytics",
-      description: "Get detailed insights into student performance with comprehensive reports and data visualization.",
+      description:
+        "Get detailed insights into student performance with comprehensive reports and data visualization.",
       color: "from-orange-500 to-red-500",
     },
     {
       icon: FiHeadphones,
       title: "24/7 Support",
-      description: "Our dedicated support team is always available to help you with any questions or issues.",
+      description:
+        "Our dedicated support team is always available to help you with any questions or issues.",
       color: "from-green-500 to-emerald-500",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
@@ -42,16 +42,19 @@ export default function ServicesSection() {
               Our Services
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">What We Offer</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            What We Offer
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive services designed to enhance your educational experience and maximize learning outcomes.
+            Comprehensive services designed to enhance your educational
+            experience and maximize learning outcomes.
           </p>
         </div>
 
         {/* Services Grid with Unique Hover Effects */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon
+            const Icon = service.icon;
             return (
               <div
                 key={index}
@@ -60,20 +63,22 @@ export default function ServicesSection() {
               >
                 {/* Gradient Background on Hover */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                  className={`absolute inset-0 bg-linear-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                 ></div>
 
                 {/* Content */}
                 <div className="relative z-10">
                   <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-xl bg-linear-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
 
                   {/* Arrow Icon */}
                   <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-gray-600 group-hover:text-blue-600 transition-colors">
@@ -84,15 +89,20 @@ export default function ServicesSection() {
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

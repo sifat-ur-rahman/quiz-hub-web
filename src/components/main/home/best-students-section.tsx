@@ -194,17 +194,17 @@ export default function BestStudentsSection() {
 
           {/* Navigation Buttons */}
           <div className="flex items-center justify-center gap-4 mt-12">
-            <button
+            <div
               onClick={prevSlide}
               className="p-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-all duration-300 hover:scale-110"
             >
               <FiChevronLeft className="w-6 h-6" />
-            </button>
+            </div>
 
             {/* Slide Indicators */}
             <div className="flex gap-2">
               {Array.from({ length: totalSlides }).map((_, i) => (
-                <button
+                <span
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   className={`h-2 rounded-full transition-all duration-300 ${
@@ -216,12 +216,12 @@ export default function BestStudentsSection() {
               ))}
             </div>
 
-            <button
+            <div
               onClick={nextSlide}
               className="p-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-all duration-300 hover:scale-110"
             >
               <FiChevronRight className="w-6 h-6" />
-            </button>
+            </div>
           </div>
         </div>
       </div>

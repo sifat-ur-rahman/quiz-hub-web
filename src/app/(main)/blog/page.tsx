@@ -90,7 +90,7 @@ export default function BlogPage() {
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Image */}
-                <div className="h-48 bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center overflow-hidden">
+                <div className="h-48 bg-linear-to-br from-emerald-100 to-teal-100 flex items-center justify-center overflow-hidden">
                   <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
                     {post.image}
                   </div>
