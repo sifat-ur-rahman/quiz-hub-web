@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { FiChevronLeft, FiChevronRight, FiAward } from "react-icons/fi"
+import { useState } from "react";
+import { FiChevronLeft, FiChevronRight, FiAward } from "react-icons/fi";
 
 export default function BestStudentsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const topStudents = [
     {
@@ -97,30 +97,33 @@ export default function BestStudentsSection() {
       badge: "star",
       streak: 20,
     },
-  ]
+  ];
 
-  const itemsPerSlide = 4
-  const totalSlides = Math.ceil(topStudents.length / itemsPerSlide)
+  const itemsPerSlide = 4;
+  const totalSlides = Math.ceil(topStudents.length / itemsPerSlide);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalSlides)
-  }
+    setCurrentIndex((prev) => (prev + 1) % totalSlides);
+  };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
-  }
+    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
-  const visibleStudents = topStudents.slice(currentIndex * itemsPerSlide, currentIndex * itemsPerSlide + itemsPerSlide)
+  const visibleStudents = topStudents.slice(
+    currentIndex * itemsPerSlide,
+    currentIndex * itemsPerSlide + itemsPerSlide
+  );
 
   const getBadgeDisplay = (badge: string) => {
-    if (badge === "gold") return "🥇"
-    if (badge === "silver") return "🥈"
-    if (badge === "bronze") return "🥉"
-    return "⭐"
-  }
+    if (badge === "gold") return "🥇";
+    if (badge === "silver") return "🥈";
+    if (badge === "bronze") return "🥉";
+    return "⭐";
+  };
 
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-emerald-50 to-teal-50">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-emerald-50 to-teal-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
@@ -129,7 +132,9 @@ export default function BestStudentsSection() {
               Top Achievers
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Best Students</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Best Students
+          </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Celebrate our top performers and their outstanding achievements.
           </p>
@@ -140,10 +145,16 @@ export default function BestStudentsSection() {
           {/* Student Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {visibleStudents.map((student, index) => (
-              <div key={student.id} className="animate-fade-in-up group" style={{ animationDelay: `${index * 50}ms` }}>
-                <div className="relative h-full bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 border border-emerald-200 hover:border-emerald-400 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/40">
+              <div
+                key={student.id}
+                className="animate-fade-in-up group"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <div className="relative h-full bg-linear-to-br from-white to-emerald-50 rounded-2xl p-6 border border-emerald-200 hover:border-emerald-400 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/40">
                   {/* Badge */}
-                  <div className="absolute -top-4 -right-4 text-3xl">{getBadgeDisplay(student.badge)}</div>
+                  <div className="absolute -top-4 -right-4 text-3xl">
+                    {getBadgeDisplay(student.badge)}
+                  </div>
 
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">
@@ -154,8 +165,12 @@ export default function BestStudentsSection() {
 
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">{student.name}</h3>
-                    <p className="text-emerald-600 font-semibold mb-4">{student.score}%</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">
+                      {student.name}
+                    </h3>
+                    <p className="text-emerald-600 font-semibold mb-4">
+                      {student.score}%
+                    </p>
 
                     {/* Stats */}
                     <div className="space-y-3">
@@ -171,7 +186,7 @@ export default function BestStudentsSection() {
                   </div>
 
                   {/* Hover Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-teal-300 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300 -z-10"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-emerald-300 to-teal-300 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300 -z-10"></div>
                 </div>
               </div>
             ))}
@@ -193,7 +208,9 @@ export default function BestStudentsSection() {
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    i === currentIndex ? "bg-emerald-500 w-8" : "bg-slate-300 w-2 hover:bg-slate-400"
+                    i === currentIndex
+                      ? "bg-emerald-500 w-8"
+                      : "bg-slate-300 w-2 hover:bg-slate-400"
                   }`}
                 />
               ))}
@@ -209,5 +226,5 @@ export default function BestStudentsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

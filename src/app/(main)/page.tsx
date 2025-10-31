@@ -10,8 +10,7 @@ import ServicesSection from "@/src/components/services-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* <Header /> */}
+    <>
       <Hero />
       <QuizSection />
       <EducationSection />
@@ -19,7 +18,6 @@ export default function Home() {
       <BestStudentsSection />
       <ServicesSection />
       <AboutSection />
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }

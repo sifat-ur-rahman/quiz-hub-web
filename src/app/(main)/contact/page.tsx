@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi"
-import { useState } from "react"
+import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
+import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -9,40 +9,32 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e: any) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-cyan-50">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-emerald-600">
-            QuizHub
-          </a>
-          <a href="/" className="text-slate-600 hover:text-emerald-600 transition-colors">
-            ← Back Home
-          </a>
-        </nav>
-      </header>
-
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-emerald-50 to-cyan-50">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Get In Touch</h1>
-          <p className="text-xl text-slate-700">We'd love to hear from you. Send us a message!</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            Get In Touch
+          </h1>
+          <p className="text-xl text-slate-700">
+            We'd love to hear from you. Send us a message!
+          </p>
         </div>
       </section>
 
@@ -51,10 +43,12 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="animate-fade-in-up">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Contact Information</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
+              Contact Information
+            </h2>
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
                   <FiMail className="w-6 h-6 text-emerald-600" />
                 </div>
                 <div>
@@ -64,7 +58,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
                   <FiPhone className="w-6 h-6 text-teal-600" />
                 </div>
                 <div>
@@ -74,26 +68,28 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center shrink-0">
                   <FiMapPin className="w-6 h-6 text-cyan-600" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Address</h3>
-                  <p className="text-slate-600">123 Learning Street, Tech City, TC 12345</p>
+                  <p className="text-slate-600">
+                    123 Learning Street, Tech City, TC 12345
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="mt-8 w-full h-64 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl flex items-center justify-center">
-              <p className="text-slate-600 text-center">📍 Map will be displayed here</p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg animate-fade-in-up">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-2xl p-8 shadow-lg animate-fade-in-up"
+          >
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">
+                Full Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -105,7 +101,9 @@ export default function ContactPage() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -117,7 +115,9 @@ export default function ContactPage() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">
+                Subject
+              </label>
               <input
                 type="text"
                 name="subject"
@@ -129,7 +129,9 @@ export default function ContactPage() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -151,5 +153,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -10,7 +10,7 @@ const RootLayout = ({
   return (
     <>
       <Header />
-      <div className="min-h-screen">{children}</div>
+      <div className="min-h-screen bg-background">{children}</div>
       <Footer />
     </>
   );

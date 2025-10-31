@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi"
-import { FaTwitter, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa"
-import { FiBook } from "react-icons/fi"
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { FaTwitter, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FiBook } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-foreground text-primary-foreground">
@@ -21,7 +22,8 @@ export default function Footer() {
               <span className="text-2xl font-bold">QuizHub</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Empowering educators and students with innovative assessment solutions.
+              Empowering educators and students with innovative assessment
+              solutions.
             </p>
           </div>
 
@@ -30,22 +32,34 @@ export default function Footer() {
             <h4 className="font-semibold text-lg">Product</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Security
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Roadmap
                 </a>
               </li>
@@ -57,24 +71,36 @@ export default function Footer() {
             <h4 className="font-semibold text-lg">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link
+                  href="/about"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link
+                  href="/blog"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link
+                  href="/careers"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -103,7 +129,9 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <FiMapPin className="w-4 h-4 mt-0.5" />
-                <span className="text-primary-foreground/70">123 Education St, Learning City, LC 12345</span>
+                <span className="text-primary-foreground/70">
+                  123 Education St, Learning City, LC 12345
+                </span>
               </li>
             </ul>
           </div>
@@ -114,7 +142,9 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/70">© {currentYear} QuizHub. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/70">
+            © {currentYear} QuizHub. All rights reserved.
+          </p>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
@@ -146,18 +176,27 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div className="flex items-center gap-4 text-sm">
-            <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a
+              href="#"
+              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
               Privacy
             </a>
-            <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a
+              href="#"
+              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
               Terms
             </a>
-            <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a
+              href="#"
+              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
               Cookies
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

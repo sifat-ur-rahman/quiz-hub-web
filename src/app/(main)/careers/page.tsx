@@ -1,6 +1,11 @@
-"use client"
+"use client";
 
-import { FiMapPin, FiDollarSign, FiBriefcase, FiArrowRight } from "react-icons/fi"
+import {
+  FiMapPin,
+  FiDollarSign,
+  FiBriefcase,
+  FiArrowRight,
+} from "react-icons/fi";
 
 export default function CareersPage() {
   const jobs = [
@@ -52,42 +57,50 @@ export default function CareersPage() {
       salary: "$100K - $140K",
       type: "Full Time",
     },
-  ]
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-emerald-50">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-emerald-600">
-            QuizHub
-          </a>
-          <a href="/" className="text-slate-600 hover:text-emerald-600 transition-colors">
-            ← Back Home
-          </a>
-        </nav>
-      </header>
-
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-purple-50 to-emerald-50">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-foreground">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Join Our Team</h1>
-          <p className="text-xl text-slate-700">Help us revolutionize online learning and education</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            Join Our Team
+          </h1>
+          <p className="text-xl text-slate-700">
+            Help us revolutionize online learning and education
+          </p>
         </div>
       </section>
 
       {/* Why Work With Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Why Join QuizHub?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+            Why Join QuizHub?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Flexible Work", desc: "Work remotely or from our offices with flexible hours" },
-              { title: "Growth Opportunities", desc: "Career development and skill enhancement programs" },
-              { title: "Great Benefits", desc: "Competitive salary, health insurance, and more" },
+              {
+                title: "Flexible Work",
+                desc: "Work remotely or from our offices with flexible hours",
+              },
+              {
+                title: "Growth Opportunities",
+                desc: "Career development and skill enhancement programs",
+              },
+              {
+                title: "Great Benefits",
+                desc: "Competitive salary, health insurance, and more",
+              },
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 rounded-xl hover:bg-emerald-50 transition-colors">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+              <div
+                key={i}
+                className="text-center p-6 rounded-xl hover:bg-emerald-50 transition-colors"
+              >
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-slate-600">{item.desc}</p>
               </div>
             ))}
@@ -98,7 +111,9 @@ export default function CareersPage() {
       {/* Job Listings */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Open Positions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+            Open Positions
+          </h2>
           <div className="space-y-4">
             {jobs.map((job) => (
               <div
@@ -107,7 +122,9 @@ export default function CareersPage() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{job.title}</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                      {job.title}
+                    </h3>
                     <div className="flex flex-wrap gap-4 text-sm text-slate-600">
                       <div className="flex items-center gap-1">
                         <FiBriefcase className="w-4 h-4 text-emerald-500" />
@@ -134,5 +151,5 @@ export default function CareersPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
