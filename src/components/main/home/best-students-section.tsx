@@ -31,7 +31,7 @@ export default function BestStudentsSection() {
       name: "Rafiul Islam",
       score: 96.8,
       courses: 11,
-      avatar: "/best-students/06.png", // man
+      avatar: "/best-students/16.png", // man
       badge: "bronze",
       streak: 42,
     },
@@ -121,7 +121,7 @@ export default function BestStudentsSection() {
       name: "Sumaiya Akter",
       score: 89.4,
       courses: 7,
-      avatar: "/best-students/03.png", // woman
+      avatar: "/best-students/15.png", // woman
       badge: "star",
       streak: 20,
     },
@@ -139,7 +139,7 @@ export default function BestStudentsSection() {
       name: "Farhana Islam",
       score: 87.6,
       courses: 7,
-      avatar: "/best-students/03.png", // woman
+      avatar: "/best-students/18.png", // woman
       badge: "star",
       streak: 18,
     },
@@ -148,7 +148,7 @@ export default function BestStudentsSection() {
       name: "Aminul Hoque",
       score: 86.4,
       courses: 7,
-      avatar: "/best-students/09.png", // man
+      avatar: "/best-students/17.png", // man
       badge: "star",
       streak: 17,
     },
