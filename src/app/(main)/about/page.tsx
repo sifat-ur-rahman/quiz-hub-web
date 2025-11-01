@@ -5,11 +5,11 @@ import OnlineExamSection from '@/src/components/main/about/online-exam-section';
 
 export default function AboutPage() {
   return (
-    <>
+    <div>
       <AboutHero />
       <AboutStats />
       <OnlineExamSection />
       <Features />
-    </>
+    </div>
   );
 }
