@@ -1,13 +1,13 @@
-"use client";
-import CountUp from "react-countup";
-import { FiTarget, FiEye, FiHeart } from "react-icons/fi";
+'use client';
+import CountUp from 'react-countup';
+import { FiTarget, FiEye, FiHeart } from 'react-icons/fi';
 
 export default function AboutSection() {
   const statsData = [
-    { number: "50", numExtra: "K+", label: "Active Users" },
-    { number: "10", numExtra: "K+", label: "Quizzes Created" },
-    { number: "500", numExtra: "+", label: "Educational Institutions" },
-    { number: "98", numExtra: "%", label: "Satisfaction Rate" },
+    { number: '50', numExtra: 'K+', label: 'Active Users' },
+    { number: '10', numExtra: 'K+', label: 'Quizzes Created' },
+    { number: '500', numExtra: '+', label: 'Educational Institutions' },
+    { number: '98', numExtra: '%', label: 'Satisfaction Rate' },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function AboutSection() {
           {/* Vision */}
           <div
             className="group animate-fade-in-up"
-            style={{ animationDelay: "100ms" }}
+            style={{ animationDelay: '100ms' }}
           >
             <div className="h-full bg-linear-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
               <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -71,7 +71,7 @@ export default function AboutSection() {
           {/* Values */}
           <div
             className="group animate-fade-in-up"
-            style={{ animationDelay: "200ms" }}
+            style={{ animationDelay: '200ms' }}
           >
             <div className="h-full bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-all hover:shadow-xl">
               <div className="w-14 h-14 bg-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

@@ -1,61 +1,61 @@
-"use client";
+'use client';
 
 import {
   FiMapPin,
   FiDollarSign,
   FiBriefcase,
   FiArrowRight,
-} from "react-icons/fi";
+} from 'react-icons/fi';
 
 export default function CareersPage() {
   const jobs = [
     {
       id: 1,
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Remote",
-      salary: "$120K - $160K",
-      type: "Full Time",
+      title: 'Senior Full Stack Developer',
+      department: 'Engineering',
+      location: 'Remote',
+      salary: '$120K - $160K',
+      type: 'Full Time',
     },
     {
       id: 2,
-      title: "Product Manager",
-      department: "Product",
-      location: "San Francisco, CA",
-      salary: "$130K - $170K",
-      type: "Full Time",
+      title: 'Product Manager',
+      department: 'Product',
+      location: 'San Francisco, CA',
+      salary: '$130K - $170K',
+      type: 'Full Time',
     },
     {
       id: 3,
-      title: "UI/UX Designer",
-      department: "Design",
-      location: "Remote",
-      salary: "$90K - $130K",
-      type: "Full Time",
+      title: 'UI/UX Designer',
+      department: 'Design',
+      location: 'Remote',
+      salary: '$90K - $130K',
+      type: 'Full Time',
     },
     {
       id: 4,
-      title: "Content Writer",
-      department: "Marketing",
-      location: "Remote",
-      salary: "$50K - $80K",
-      type: "Full Time",
+      title: 'Content Writer',
+      department: 'Marketing',
+      location: 'Remote',
+      salary: '$50K - $80K',
+      type: 'Full Time',
     },
     {
       id: 5,
-      title: "QA Engineer",
-      department: "Quality Assurance",
-      location: "Remote",
-      salary: "$80K - $110K",
-      type: "Full Time",
+      title: 'QA Engineer',
+      department: 'Quality Assurance',
+      location: 'Remote',
+      salary: '$80K - $110K',
+      type: 'Full Time',
     },
     {
       id: 6,
-      title: "Data Analyst",
-      department: "Analytics",
-      location: "New York, NY",
-      salary: "$100K - $140K",
-      type: "Full Time",
+      title: 'Data Analyst',
+      department: 'Analytics',
+      location: 'New York, NY',
+      salary: '$100K - $140K',
+      type: 'Full Time',
     },
   ];
 
@@ -82,16 +82,16 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Flexible Work",
-                desc: "Work remotely or from our offices with flexible hours",
+                title: 'Flexible Work',
+                desc: 'Work remotely or from our offices with flexible hours',
               },
               {
-                title: "Growth Opportunities",
-                desc: "Career development and skill enhancement programs",
+                title: 'Growth Opportunities',
+                desc: 'Career development and skill enhancement programs',
               },
               {
-                title: "Great Benefits",
-                desc: "Competitive salary, health insurance, and more",
+                title: 'Great Benefits',
+                desc: 'Competitive salary, health insurance, and more',
               },
             ].map((item, i) => (
               <div
@@ -115,7 +115,7 @@ export default function CareersPage() {
             Open Positions
           </h2>
           <div className="space-y-4">
-            {jobs.map((job) => (
+            {jobs.map(job => (
               <div
                 key={job.id}
                 className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-l-4 hover:border-l-emerald-500"

@@ -1,4 +1,4 @@
-import { FiHelpCircle, FiBarChart2, FiUsers } from "react-icons/fi";
+import { FiHelpCircle, FiBarChart2, FiUsers } from 'react-icons/fi';
 
 export default function QuizSection() {
   return (
@@ -22,13 +22,13 @@ export default function QuizSection() {
 
         {/* Horizontal Timeline Style Cards */}
         <div className="space-y-6">
-          <div className="flex gap-6 items-start group animate-fade-in-up">
+          <div className="flex gap-4 md:gap-6 items-start group animate-fade-in-up">
             <div className="shrink-0">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
-                <FiHelpCircle className="w-8 h-8" />
+              <div className="flex items-center justify-center h-10  md:h-16 w-10 md:w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
+                <FiHelpCircle className="md:w-8 w-5 h-5 md:h-8" />
               </div>
             </div>
-            <div className="grow p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
+            <div className="grow p-4 md:p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 Multiple Question Types
               </h3>
@@ -40,15 +40,15 @@ export default function QuizSection() {
           </div>
 
           <div
-            className="flex gap-6 items-start group animate-fade-in-up"
-            style={{ animationDelay: "100ms" }}
+            className="flex gap-4 md:gap-6 items-start group animate-fade-in-up"
+            style={{ animationDelay: '100ms' }}
           >
             <div className="shrink-0">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
-                <FiBarChart2 className="w-8 h-8" />
+              <div className="flex items-center justify-center h-10  md:h-16 w-10 md:w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
+                <FiBarChart2 className="md:w-8 w-5 h-5 md:h-8" />
               </div>
             </div>
-            <div className="grow p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
+            <div className="grow p-4 md:p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 Instant Grading
               </h3>
@@ -60,15 +60,15 @@ export default function QuizSection() {
           </div>
 
           <div
-            className="flex gap-6 items-start group animate-fade-in-up"
-            style={{ animationDelay: "200ms" }}
+            className="flex gap-4 md:gap-6 items-start group animate-fade-in-up"
+            style={{ animationDelay: '200ms' }}
           >
             <div className="shrink-0">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
-                <FiUsers className="w-8 h-8" />
+              <div className="flex items-center justify-center h-10  md:h-16 w-10 md:w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
+                <FiUsers className="md:w-8 w-5 h-5 md:h-8" />
               </div>
             </div>
-            <div className="grow p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
+            <div className="grow p-4 md:p-6 bg-white rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all group-hover:shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 Collaborative Learning
               </h3>

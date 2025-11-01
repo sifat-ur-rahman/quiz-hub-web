@@ -1,7 +1,7 @@
-"use client";
-import CountUp from "react-countup";
-import { FiArrowRight } from "react-icons/fi";
-import { MdAutoAwesome } from "react-icons/md";
+'use client';
+import CountUp from 'react-countup';
+import { FiArrowRight } from 'react-icons/fi';
+import { MdAutoAwesome } from 'react-icons/md';
 
 export default function Hero() {
   return (
@@ -12,12 +12,12 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto">
         <div className="space-y-6 animate-fade-in-up max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full">
             <MdAutoAwesome className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">
               Welcome to QuizHub
             </span>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             Master Learning with
@@ -30,7 +30,7 @@ export default function Hero() {
             progress all in one place.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+          <div className="flex flex-row gap-4 pt-4 justify-center">
             <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
               Start Learning
               <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="grid grid-cols-3 gap-4 pt-8">
             <div>
               <p className="text-2xl font-bold text-primary">
-                {" "}
+                {' '}
                 <CountUp
                   enableScrollSpy
                   duration={5}

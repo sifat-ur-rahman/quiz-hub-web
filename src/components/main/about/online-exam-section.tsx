@@ -1,4 +1,4 @@
-import { FiCheckCircle, FiClock, FiLock } from "react-icons/fi";
+import { FiCheckCircle, FiClock, FiLock } from 'react-icons/fi';
 
 function OnlineExamSection() {
   return (
@@ -7,7 +7,7 @@ function OnlineExamSection() {
         {/* Section Header */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className=" mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold  mb-4">
               Secure Online Exams
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -35,7 +35,7 @@ function OnlineExamSection() {
 
             <div
               className="p-6 bg-linear-to-r from-purple-50 to-purple-100 rounded-xl border-l-4 border-purple-600 hover:shadow-lg transition-shadow animate-fade-in-up"
-              style={{ animationDelay: "100ms" }}
+              style={{ animationDelay: '100ms' }}
             >
               <div className="flex items-start gap-4">
                 <FiClock className="w-6 h-6 text-purple-600 shrink-0 mt-1" />
@@ -53,7 +53,7 @@ function OnlineExamSection() {
 
             <div
               className="p-6 bg-linear-to-r from-pink-50 to-pink-100 rounded-xl border-l-4 border-pink-600 hover:shadow-lg transition-shadow animate-fade-in-up"
-              style={{ animationDelay: "200ms" }}
+              style={{ animationDelay: '200ms' }}
             >
               <div className="flex items-start gap-4">
                 <FiCheckCircle className="w-6 h-6 text-pink-600 shrink-0 mt-1" />

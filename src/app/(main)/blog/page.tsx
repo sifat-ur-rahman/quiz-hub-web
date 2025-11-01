@@ -1,67 +1,67 @@
-"use client";
+'use client';
 
-import { FiCalendar, FiUser, FiArrowRight } from "react-icons/fi";
+import { FiCalendar, FiUser, FiArrowRight } from 'react-icons/fi';
 
 export default function BlogPage() {
   const blogPosts = [
     {
       id: 1,
-      title: "10 Tips to Ace Your Online Exams",
+      title: '10 Tips to Ace Your Online Exams',
       excerpt:
-        "Learn proven strategies to improve your performance in online assessments.",
-      author: "Sarah Johnson",
-      date: "Oct 25, 2024",
-      category: "Study Tips",
-      image: "🎓",
+        'Learn proven strategies to improve your performance in online assessments.',
+      author: 'Sarah Johnson',
+      date: 'Oct 25, 2024',
+      category: 'Study Tips',
+      image: '🎓',
     },
     {
       id: 2,
-      title: "The Future of Online Learning",
+      title: 'The Future of Online Learning',
       excerpt:
-        "Exploring how AI and technology are transforming education globally.",
-      author: "Mike Chen",
-      date: "Oct 20, 2024",
-      category: "Technology",
-      image: "🚀",
+        'Exploring how AI and technology are transforming education globally.',
+      author: 'Mike Chen',
+      date: 'Oct 20, 2024',
+      category: 'Technology',
+      image: '🚀',
     },
     {
       id: 3,
-      title: "Effective Time Management for Students",
-      excerpt: "Master the art of balancing studies, work, and personal life.",
-      author: "Emma Davis",
-      date: "Oct 15, 2024",
-      category: "Productivity",
-      image: "⏰",
+      title: 'Effective Time Management for Students',
+      excerpt: 'Master the art of balancing studies, work, and personal life.',
+      author: 'Emma Davis',
+      date: 'Oct 15, 2024',
+      category: 'Productivity',
+      image: '⏰',
     },
     {
       id: 4,
-      title: "Success Stories from QuizHub Students",
+      title: 'Success Stories from QuizHub Students',
       excerpt:
-        "Real stories of students who achieved their dreams with QuizHub.",
-      author: "Admin",
-      date: "Oct 10, 2024",
-      category: "Success",
-      image: "⭐",
+        'Real stories of students who achieved their dreams with QuizHub.',
+      author: 'Admin',
+      date: 'Oct 10, 2024',
+      category: 'Success',
+      image: '⭐',
     },
     {
       id: 5,
-      title: "Creating Engaging Quizzes: Best Practices",
+      title: 'Creating Engaging Quizzes: Best Practices',
       excerpt:
-        "Guide for educators on designing effective and interactive quizzes.",
-      author: "James Wilson",
-      date: "Oct 5, 2024",
-      category: "Education",
-      image: "📚",
+        'Guide for educators on designing effective and interactive quizzes.',
+      author: 'James Wilson',
+      date: 'Oct 5, 2024',
+      category: 'Education',
+      image: '📚',
     },
     {
       id: 6,
-      title: "Mental Health While Studying Online",
+      title: 'Mental Health While Studying Online',
       excerpt:
-        "Tips to maintain mental wellness during intense online learning periods.",
-      author: "Dr. Lisa",
-      date: "Sep 30, 2024",
-      category: "Wellness",
-      image: "🧠",
+        'Tips to maintain mental wellness during intense online learning periods.',
+      author: 'Dr. Lisa',
+      date: 'Sep 30, 2024',
+      category: 'Wellness',
+      image: '🧠',
     },
   ];
 

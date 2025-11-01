@@ -1,4 +1,4 @@
-import { FiBook, FiAward, FiTarget } from "react-icons/fi";
+import { FiBook, FiAward, FiTarget } from 'react-icons/fi';
 
 export default function EducationSection() {
   return (
@@ -43,7 +43,7 @@ export default function EducationSection() {
 
             <div
               className="p-6 bg-linear-to-r from-purple-50 to-purple-100 rounded-xl border-l-4 border-purple-600 hover:shadow-lg transition-shadow animate-fade-in-up"
-              style={{ animationDelay: "100ms" }}
+              style={{ animationDelay: '100ms' }}
             >
               <div className="flex items-start gap-4">
                 <FiAward className="w-6 h-6 text-purple-600 shrink-0 mt-1" />
@@ -61,7 +61,7 @@ export default function EducationSection() {
 
             <div
               className="p-6 bg-linear-to-r from-pink-50 to-pink-100 rounded-xl border-l-4 border-pink-600 hover:shadow-lg transition-shadow animate-fade-in-up"
-              style={{ animationDelay: "200ms" }}
+              style={{ animationDelay: '200ms' }}
             >
               <div className="flex items-start gap-4">
                 <FiTarget className="w-6 h-6 text-pink-600 shrink-0 mt-1" />

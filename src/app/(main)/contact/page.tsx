@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
-import { useState } from "react";
+import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import { useState } from 'react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
 
   const handleChange = (e: any) => {
@@ -20,8 +20,8 @@ export default function ContactPage() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    console.log('Form submitted:', formData);
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   return (

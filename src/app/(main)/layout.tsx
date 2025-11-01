@@ -1,6 +1,6 @@
-import Footer from "@/src/components/main/shared/footer";
-import Header from "@/src/components/main/shared/header";
-import React from "react";
+import Footer from '@/src/components/main/shared/footer';
+import Header from '@/src/components/main/shared/header';
+import React from 'react';
 
 const RootLayout = ({
   children,
