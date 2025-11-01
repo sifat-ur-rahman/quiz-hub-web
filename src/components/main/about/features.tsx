@@ -33,7 +33,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold  mb-4">
             Powerful Features
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

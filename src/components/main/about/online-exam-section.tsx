@@ -7,7 +7,7 @@ function OnlineExamSection() {
         {/* Section Header */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className=" mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold  mb-4">
               Secure Online Exams
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
