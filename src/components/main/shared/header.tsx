@@ -60,7 +60,18 @@ export default function Header() {
             aria-hidden={!isOpen}
           >
             <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-              <span className="font-medium"></span>
+              <Link
+                href="/"
+                className="flex items-center w-[140px] gap-2 animate-fade-in-up"
+              >
+                <Image
+                  src="/logo-black.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="w-full"
+                />
+              </Link>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 text-foreground hover:text-primary"
