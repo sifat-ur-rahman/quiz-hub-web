@@ -1,29 +1,29 @@
-import { FiZap, FiShield, FiTrendingUp, FiClock } from "react-icons/fi";
+import { FiZap, FiShield, FiTrendingUp, FiClock } from 'react-icons/fi';
 
 const features = [
   {
     icon: FiZap,
-    title: "Lightning Fast",
+    title: 'Lightning Fast',
     description:
-      "Experience blazing-fast quiz creation and instant result processing.",
+      'Experience blazing-fast quiz creation and instant result processing.',
   },
   {
     icon: FiShield,
-    title: "Secure & Reliable",
+    title: 'Secure & Reliable',
     description:
-      "Enterprise-grade security to protect all your data and assessments.",
+      'Enterprise-grade security to protect all your data and assessments.',
   },
   {
     icon: FiTrendingUp,
-    title: "Advanced Analytics",
+    title: 'Advanced Analytics',
     description:
-      "Detailed insights and reports to track performance and progress.",
+      'Detailed insights and reports to track performance and progress.',
   },
   {
     icon: FiClock,
-    title: "Real-time Updates",
+    title: 'Real-time Updates',
     description:
-      "Live notifications and instant feedback for all participants.",
+      'Live notifications and instant feedback for all participants.',
   },
 ];
 

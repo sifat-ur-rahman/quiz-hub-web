@@ -1,30 +1,30 @@
-import { FiUserPlus, FiBookOpen, FiBarChart2 } from "react-icons/fi";
+import { FiUserPlus, FiBookOpen, FiBarChart2 } from 'react-icons/fi';
 
 export default function HowItWorksSection() {
   const steps = [
     {
       id: 1,
-      title: "Create Your Free Account",
+      title: 'Create Your Free Account',
       description:
-        "Sign up in minutes with your email and get instant access to all features",
+        'Sign up in minutes with your email and get instant access to all features',
       icon: FiUserPlus,
-      color: "from-emerald-400 to-teal-500",
+      color: 'from-emerald-400 to-teal-500',
     },
     {
       id: 2,
-      title: "Choose Subject & Start Test",
+      title: 'Choose Subject & Start Test',
       description:
-        "Browse through various subjects and topics, then take your first test",
+        'Browse through various subjects and topics, then take your first test',
       icon: FiBookOpen,
-      color: "from-blue-400 to-cyan-500",
+      color: 'from-blue-400 to-cyan-500',
     },
     {
       id: 3,
-      title: "See Your Performance Instantly",
+      title: 'See Your Performance Instantly',
       description:
-        "Get detailed analytics and insights to track your progress and improve",
+        'Get detailed analytics and insights to track your progress and improve',
       icon: FiBarChart2,
-      color: "from-purple-400 to-pink-500",
+      color: 'from-purple-400 to-pink-500',
     },
   ];
 

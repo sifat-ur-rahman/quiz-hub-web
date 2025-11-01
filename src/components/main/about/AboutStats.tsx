@@ -1,5 +1,5 @@
-"use client";
-import CountUp from "react-countup";
+'use client';
+import CountUp from 'react-countup';
 
 function AboutStats() {
   return (

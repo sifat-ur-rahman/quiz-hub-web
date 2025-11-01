@@ -1,7 +1,7 @@
-"use client";
-import CountUp from "react-countup";
-import { FiArrowRight } from "react-icons/fi";
-import { MdAutoAwesome } from "react-icons/md";
+'use client';
+import CountUp from 'react-countup';
+import { FiArrowRight } from 'react-icons/fi';
+import { MdAutoAwesome } from 'react-icons/md';
 
 export default function Hero() {
   return (
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="grid grid-cols-3 gap-4 pt-8">
             <div>
               <p className="text-2xl font-bold text-primary">
-                {" "}
+                {' '}
                 <CountUp
                   enableScrollSpy
                   duration={5}

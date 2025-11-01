@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import { FiMenu, FiX } from "react-icons/fi";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   const navLinks = [
-    { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   // ensure document is available for portals (client-only)
@@ -25,16 +25,16 @@ export default function Header() {
   useEffect(() => {
     if (isOpen) {
       // add to both html and body for maximum compatibility
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     } else {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -46,16 +46,16 @@ export default function Header() {
           <div
             onClick={() => setIsOpen(false)}
             className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-1000 transition-opacity duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0 pointer-events-auto"
+              isOpen ? 'opacity-100' : 'opacity-0 pointer-events-auto'
             }`}
             aria-hidden="true"
-            style={{ pointerEvents: isOpen ? "auto" : "none" }}
+            style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           />
 
           {/* Side nav */}
           <aside
             className={`fixed top-0 right-0 h-screen w-[60%] max-w-xs bg-white border-l border-border shadow-xl transform transition-transform duration-300 ease-in-out z-1001 ${
-              isOpen ? "translate-x-0" : "translate-x-full"
+              isOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
             aria-hidden={!isOpen}
           >
@@ -90,7 +90,7 @@ export default function Header() {
                 Home
               </Link>
 
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -134,7 +134,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -157,7 +157,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen((v) => !v)}
+            onClick={() => setIsOpen(v => !v)}
             className="md:hidden p-2 text-foreground hover:text-primary rounded-lg transition-colors"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"

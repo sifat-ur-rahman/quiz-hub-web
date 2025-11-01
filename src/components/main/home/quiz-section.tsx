@@ -1,4 +1,4 @@
-import { FiHelpCircle, FiBarChart2, FiUsers } from "react-icons/fi";
+import { FiHelpCircle, FiBarChart2, FiUsers } from 'react-icons/fi';
 
 export default function QuizSection() {
   return (
@@ -41,7 +41,7 @@ export default function QuizSection() {
 
           <div
             className="flex gap-4 md:gap-6 items-start group animate-fade-in-up"
-            style={{ animationDelay: "100ms" }}
+            style={{ animationDelay: '100ms' }}
           >
             <div className="shrink-0">
               <div className="flex items-center justify-center h-10  md:h-16 w-10 md:w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">
@@ -61,7 +61,7 @@ export default function QuizSection() {
 
           <div
             className="flex gap-4 md:gap-6 items-start group animate-fade-in-up"
-            style={{ animationDelay: "200ms" }}
+            style={{ animationDelay: '200ms' }}
           >
             <div className="shrink-0">
               <div className="flex items-center justify-center h-10  md:h-16 w-10 md:w-16 rounded-full bg-emerald-500 text-white shadow-lg group-hover:shadow-xl transition-shadow">

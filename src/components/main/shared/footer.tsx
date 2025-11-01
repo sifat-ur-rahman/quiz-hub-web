@@ -1,8 +1,8 @@
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import { FaTwitter, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { FiBook } from "react-icons/fi";
-import Link from "next/link";
-import Image from "next/image";
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FaTwitter, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
+import { FiBook } from 'react-icons/fi';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

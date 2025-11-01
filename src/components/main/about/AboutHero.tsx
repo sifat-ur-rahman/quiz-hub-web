@@ -1,4 +1,4 @@
-import { FiEye, FiHeart, FiTarget } from "react-icons/fi";
+import { FiEye, FiHeart, FiTarget } from 'react-icons/fi';
 
 function AboutHero() {
   return (

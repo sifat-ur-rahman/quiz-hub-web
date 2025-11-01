@@ -1,34 +1,34 @@
-import { FiCode, FiUsers, FiBarChart2, FiHeadphones } from "react-icons/fi";
+import { FiCode, FiUsers, FiBarChart2, FiHeadphones } from 'react-icons/fi';
 
 export default function ServicesSection() {
   const services = [
     {
       icon: FiCode,
-      title: "Custom Quiz Builder",
+      title: 'Custom Quiz Builder',
       description:
-        "Create unlimited quizzes with our intuitive drag-and-drop interface and advanced customization options.",
-      color: "from-blue-500 to-cyan-500",
+        'Create unlimited quizzes with our intuitive drag-and-drop interface and advanced customization options.',
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: FiUsers,
-      title: "Team Collaboration",
+      title: 'Team Collaboration',
       description:
-        "Work together with educators and students in real-time with our collaborative learning environment.",
-      color: "from-purple-500 to-pink-500",
+        'Work together with educators and students in real-time with our collaborative learning environment.',
+      color: 'from-purple-500 to-pink-500',
     },
     {
       icon: FiBarChart2,
-      title: "Advanced Analytics",
+      title: 'Advanced Analytics',
       description:
-        "Get detailed insights into student performance with comprehensive reports and data visualization.",
-      color: "from-orange-500 to-red-500",
+        'Get detailed insights into student performance with comprehensive reports and data visualization.',
+      color: 'from-orange-500 to-red-500',
     },
     {
       icon: FiHeadphones,
-      title: "24/7 Support",
+      title: '24/7 Support',
       description:
-        "Our dedicated support team is always available to help you with any questions or issues.",
-      color: "from-green-500 to-emerald-500",
+        'Our dedicated support team is always available to help you with any questions or issues.',
+      color: 'from-green-500 to-emerald-500',
     },
   ];
 
