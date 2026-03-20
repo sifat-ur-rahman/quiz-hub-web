@@ -1,43 +1,43 @@
-'use client';
-import CountUp from 'react-countup';
-import { FiTarget, FiEye, FiHeart } from 'react-icons/fi';
+"use client";
+import CountUp from "react-countup";
+import { FiTarget, FiEye, FiHeart } from "react-icons/fi";
 
 export default function AboutSection() {
   const statsData = [
-    { number: '50', numExtra: 'K+', label: 'Active Users' },
-    { number: '10', numExtra: 'K+', label: 'Quizzes Created' },
-    { number: '500', numExtra: '+', label: 'Educational Institutions' },
-    { number: '98', numExtra: '%', label: 'Satisfaction Rate' },
+    { number: "50", numExtra: "K+", label: "Active Users" },
+    { number: "10", numExtra: "K+", label: "Quizzes Created" },
+    { number: "500", numExtra: "+", label: "Educational Institutions" },
+    { number: "98", numExtra: "%", label: "Satisfaction Rate" },
   ];
 
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-emerald-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-linear-to-b from-white to-emerald-50 px-4 py-20 sm:px-6 md:py-32 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold">
+        <div className="animate-fade-in-up mb-16 text-center">
+          <div className="mb-4 inline-block">
+            <span className="rounded-full bg-teal-100 px-4 py-2 text-sm font-semibold text-teal-700">
               About Us
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-foreground mb-4 text-4xl font-bold md:text-5xl">
             About QuizHub
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Revolutionizing education through innovative assessment and learning
             technologies.
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid gap-8 md:grid-cols-3">
           {/* Mission */}
           <div className="group animate-fade-in-up">
-            <div className="h-full bg-linear-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-200 hover:border-emerald-400 transition-all hover:shadow-xl">
-              <div className="w-14 h-14 bg-emerald-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <FiTarget className="w-7 h-7 text-white" />
+            <div className="h-full rounded-2xl border-2 border-emerald-200 bg-linear-to-br from-emerald-50 to-teal-50 p-8 transition-all hover:border-emerald-400 hover:shadow-xl">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500 transition-transform group-hover:scale-110">
+                <FiTarget className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-foreground mb-4 text-2xl font-bold">
                 Our Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -51,13 +51,13 @@ export default function AboutSection() {
           {/* Vision */}
           <div
             className="group animate-fade-in-up"
-            style={{ animationDelay: '100ms' }}
+            style={{ animationDelay: "100ms" }}
           >
-            <div className="h-full bg-linear-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
-              <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <FiEye className="w-7 h-7 text-white" />
+            <div className="h-full rounded-2xl border-2 border-blue-200 bg-linear-to-br from-blue-50 to-cyan-50 p-8 transition-all hover:border-blue-400 hover:shadow-xl">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500 transition-transform group-hover:scale-110">
+                <FiEye className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-foreground mb-4 text-2xl font-bold">
                 Our Vision
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -71,13 +71,13 @@ export default function AboutSection() {
           {/* Values */}
           <div
             className="group animate-fade-in-up"
-            style={{ animationDelay: '200ms' }}
+            style={{ animationDelay: "200ms" }}
           >
-            <div className="h-full bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-all hover:shadow-xl">
-              <div className="w-14 h-14 bg-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <FiHeart className="w-7 h-7 text-white" />
+            <div className="h-full rounded-2xl border-2 border-purple-200 bg-linear-to-br from-purple-50 to-pink-50 p-8 transition-all hover:border-purple-400 hover:shadow-xl">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-500 transition-transform group-hover:scale-110">
+                <FiHeart className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-foreground mb-4 text-2xl font-bold">
                 Our Values
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -89,14 +89,14 @@ export default function AboutSection() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid gap-6 md:grid-cols-4">
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:border-emerald-400 hover:shadow-lg transition-all animate-fade-in-up"
+              className="animate-fade-in-up rounded-xl border border-gray-200 bg-white p-6 text-center transition-all hover:border-emerald-400 hover:shadow-lg"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="text-3xl md:text-4xl font-bold bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+              <div className="mb-2 bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
                 <CountUp
                   enableScrollSpy
                   duration={5}

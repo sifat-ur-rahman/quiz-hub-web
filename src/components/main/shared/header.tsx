@@ -45,8 +45,8 @@ export default function Header() {
           {/* Full-screen overlay */}
           <div
             onClick={() => setIsOpen(false)}
-            className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-1000 transition-opacity duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0 pointer-events-auto"
+            className={`fixed inset-0 z-1000 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
+              isOpen ? "opacity-100" : "pointer-events-auto opacity-0"
             }`}
             aria-hidden="true"
             style={{ pointerEvents: isOpen ? "auto" : "none" }}
@@ -54,15 +54,15 @@ export default function Header() {
 
           {/* Side nav */}
           <aside
-            className={`fixed top-0 right-0 h-screen w-[60%] max-w-xs bg-white border-l border-border shadow-xl transform transition-transform duration-300 ease-in-out z-1001 ${
+            className={`border-border fixed top-0 right-0 z-1001 h-screen w-[60%] max-w-xs transform border-l bg-white shadow-xl transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
             aria-hidden={!isOpen}
           >
-            <div className="flex items-center justify-between px-4 py-4 border-b border-border">
+            <div className="border-border flex items-center justify-between border-b px-4 py-4">
               <Link
                 href="/"
-                className="flex items-center w-[140px] gap-2 animate-fade-in-up"
+                className="animate-fade-in-up flex w-[140px] items-center gap-2"
               >
                 <Image
                   src="/logo-black.png"
@@ -74,18 +74,18 @@ export default function Header() {
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-foreground hover:text-primary"
+                className="text-foreground hover:text-primary p-2"
                 aria-label="Close menu"
               >
-                <FiX className="w-6 h-6" />
+                <FiX className="h-6 w-6" />
               </button>
             </div>
 
-            <div className="flex flex-col px-6 py-6 space-y-4">
+            <div className="flex flex-col space-y-4 px-6 py-6">
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
-                className="block py-2 text-foreground hover:text-primary transition-colors"
+                className="text-foreground hover:text-primary block py-2 transition-colors"
               >
                 Home
               </Link>
@@ -95,7 +95,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
+                  className="text-foreground hover:text-primary block py-2 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -103,28 +103,28 @@ export default function Header() {
               <hr className="border-border my-4" />
               <Link
                 href="/login"
-                className="w-full px-4 py-2 border border-primary/50 hover:bg-primary/5 rounded-sm text-foreground hover:text-primary transition-colors"
+                className="border-primary/50 hover:bg-primary/5 text-foreground hover:text-primary w-full rounded-sm border px-4 py-2 transition-colors"
               >
                 Sign In
               </Link>
-              <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-sm hover:bg-primary/90 transition-all duration-300 font-semibold">
+              <button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full rounded-sm px-4 py-2 font-semibold transition-all duration-300">
                 Get Started
               </button>
             </div>
           </aside>
         </>,
-        document.body
+        document.body,
       )
     : null;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className="bg-background/95 border-border sticky top-0 z-50 border-b backdrop-blur-sm">
+      <nav className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center w-[190px] gap-2 animate-fade-in-up"
+            className="animate-fade-in-up flex w-[190px] items-center gap-2"
           >
             <Image
               src="/logo-black.png"
@@ -136,7 +136,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -149,14 +149,14 @@ export default function Header() {
           </div>
 
           {/* Auth Buttons (Desktop) */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden items-center gap-4 md:flex">
             <Link
               href="/login"
-              className="px-6 py-2 text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary px-6 py-2 transition-colors duration-300"
             >
               Sign In
             </Link>
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl">
+            <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-2 font-semibold shadow-lg transition-all duration-300 hover:shadow-xl">
               Get Started
             </button>
           </div>
@@ -164,14 +164,14 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen((v) => !v)}
-            className="md:hidden p-2 text-foreground hover:text-primary rounded-lg transition-colors"
+            className="text-foreground hover:text-primary rounded-lg p-2 transition-colors md:hidden"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
             {isOpen ? (
-              <FiX className="w-6 h-6" />
+              <FiX className="h-6 w-6" />
             ) : (
-              <FiMenu className="w-6 h-6" />
+              <FiMenu className="h-6 w-6" />
             )}
           </button>
         </div>

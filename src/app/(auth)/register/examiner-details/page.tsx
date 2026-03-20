@@ -26,7 +26,7 @@ export default function ExaminerDetailsPage() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -52,17 +52,17 @@ export default function ExaminerDetailsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background min-h-screen">
       {/* <Header /> */}
-      <main className="flex items-center justify-center min-h-screen px-4 py-20">
+      <main className="flex min-h-screen items-center justify-center px-4 py-20">
         <div className="w-full max-w-2xl">
           <div className="animate-fade-in-up">
             {/* Header */}
-            <div className="text-center mb-8">
-              <div className="inline-block bg-linear-to-br from-emerald-100 to-emerald-200 rounded-full p-4 mb-4">
+            <div className="mb-8 text-center">
+              <div className="mb-4 inline-block rounded-full bg-linear-to-br from-emerald-100 to-emerald-200 p-4">
                 <FiBriefcase className="text-emerald-600" size={32} />
               </div>
-              <h1 className="text-3xl font-bold text-slate-900 mb-2">
+              <h1 className="mb-2 text-3xl font-bold text-slate-900">
                 Examiner Profile Setup
               </h1>
               <p className="text-slate-600">
@@ -73,12 +73,12 @@ export default function ExaminerDetailsPage() {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="space-y-6 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm"
+              className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
             >
               {/* Row 1 */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Full Name *
                   </label>
                   <input
@@ -87,19 +87,19 @@ export default function ExaminerDetailsPage() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="Dr. Jane Smith"
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                    className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Designation *
                   </label>
                   <select
                     name="designation"
                     value={formData.designation}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                    className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                     required
                   >
                     <option value="">Select designation</option>
@@ -113,14 +113,14 @@ export default function ExaminerDetailsPage() {
               </div>
 
               {/* Row 2 */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Email *
                   </label>
                   <div className="relative">
                     <FiMail
-                      className="absolute left-3 top-3 text-emerald-500"
+                      className="absolute top-3 left-3 text-emerald-500"
                       size={20}
                     />
                     <input
@@ -129,18 +129,18 @@ export default function ExaminerDetailsPage() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="examiner@example.com"
-                      className="w-full pl-10 pr-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                      className="w-full rounded-lg border-2 border-slate-200 py-3 pr-4 pl-10 transition-colors focus:border-emerald-500 focus:outline-none"
                       required
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Phone Number
                   </label>
                   <div className="relative">
                     <FiPhone
-                      className="absolute left-3 top-3 text-emerald-500"
+                      className="absolute top-3 left-3 text-emerald-500"
                       size={20}
                     />
                     <input
@@ -149,16 +149,16 @@ export default function ExaminerDetailsPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full pl-10 pr-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                      className="w-full rounded-lg border-2 border-slate-200 py-3 pr-4 pl-10 transition-colors focus:border-emerald-500 focus:outline-none"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Row 3 */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Institution *
                   </label>
                   <input
@@ -167,19 +167,19 @@ export default function ExaminerDetailsPage() {
                     value={formData.institution}
                     onChange={handleChange}
                     placeholder="Your Institution Name"
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                    className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Years of Experience *
                   </label>
                   <select
                     name="experience"
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                    className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                     required
                   >
                     <option value="">Select experience</option>
@@ -193,7 +193,7 @@ export default function ExaminerDetailsPage() {
 
               {/* Subjects */}
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="mb-2 block text-sm font-medium text-slate-700">
                   Subjects You Teach *
                 </label>
                 <textarea
@@ -202,14 +202,14 @@ export default function ExaminerDetailsPage() {
                   onChange={handleChange}
                   placeholder="e.g., Mathematics, Physics, English..."
                   rows={2}
-                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                   required
                 />
               </div>
 
               {/* Qualifications */}
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="mb-2 block text-sm font-medium text-slate-700">
                   Qualifications
                 </label>
                 <textarea
@@ -218,13 +218,13 @@ export default function ExaminerDetailsPage() {
                   onChange={handleChange}
                   placeholder="e.g., B.Sc in Physics, M.Ed..."
                   rows={2}
-                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                 />
               </div>
 
               {/* Bio */}
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="mb-2 block text-sm font-medium text-slate-700">
                   Professional Bio
                 </label>
                 <textarea
@@ -233,7 +233,7 @@ export default function ExaminerDetailsPage() {
                   onChange={handleChange}
                   placeholder="Tell us about your teaching experience and expertise..."
                   rows={3}
-                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
                 />
               </div>
 
@@ -241,7 +241,7 @@ export default function ExaminerDetailsPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-linear-to-r from-emerald-500 to-emerald-600 text-white font-semibold py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-linear-to-r from-emerald-500 to-emerald-600 py-3 font-semibold text-white transition-all hover:shadow-lg disabled:opacity-70"
               >
                 {loading ? "Saving..." : "Complete Registration"}
                 <FiArrowRight size={18} />

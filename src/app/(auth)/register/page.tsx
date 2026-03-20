@@ -18,18 +18,18 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background min-h-screen">
       {/* <Header /> */}
-      <main className="flex items-center justify-center min-h-screen px-4 py-20">
+      <main className="flex min-h-screen items-center justify-center px-4 py-20">
         <div className="w-full max-w-4xl">
           {step === 1 && (
             <div className="animate-fade-in-up">
               {/* Header */}
-              <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold text-slate-900 mb-2">
+              <div className="mb-12 text-center">
+                <h1 className="mb-2 text-4xl font-bold text-slate-900">
                   Join QuizHub
                 </h1>
-                <p className="text-slate-600 text-lg">
+                <p className="text-lg text-slate-600">
                   Choose your role to get started
                 </p>
               </div>
@@ -38,13 +38,13 @@ export default function RegisterPage() {
               <UserTypeSelection handleRegisterClick={handleRegisterClick} />
 
               {/* Sign In Link */}
-              <div className="text-center mt-12">
+              <div className="mt-12 text-center">
                 <span className="text-slate-600">
                   Already have an account?{" "}
                 </span>
                 <button
                   onClick={() => router.push("/login")}
-                  className="text-emerald-600 font-semibold hover:text-emerald-700"
+                  className="font-semibold text-emerald-600 hover:text-emerald-700"
                 >
                   Sign In
                 </button>

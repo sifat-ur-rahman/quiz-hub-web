@@ -53,90 +53,90 @@ export default function StudentDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredCourses = courses.filter((course) =>
-    course.name.toLowerCase().includes(searchQuery.toLowerCase())
+    course.name.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       {/* Header */}
-      <header className="sticky top-0 z-40 bg-white border-b border-emerald-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="sticky top-0 z-40 border-b border-emerald-100 bg-white shadow-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 text-lg font-bold text-white">
               Q
             </div>
             <h1 className="text-2xl font-bold text-emerald-600">QuizHub</h1>
           </div>
 
-          <div className="flex-1 max-w-md mx-8">
+          <div className="mx-8 max-w-md flex-1">
             <div className="relative">
-              <FiSearch className="absolute left-3 top-3 text-emerald-400 text-lg" />
+              <FiSearch className="absolute top-3 left-3 text-lg text-emerald-400" />
               <input
                 type="text"
                 placeholder="Search courses..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-lg border border-emerald-200 bg-emerald-50 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 text-sm"
+                className="w-full rounded-lg border border-emerald-200 bg-emerald-50 py-2 pr-4 pl-10 text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 focus:outline-none"
               />
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-emerald-50 rounded-lg transition">
-              <FiBell className="text-emerald-600 text-lg" />
+            <button className="rounded-lg p-2 transition hover:bg-emerald-50">
+              <FiBell className="text-lg text-emerald-600" />
             </button>
             <Link
               href="/profile"
-              className="p-2 hover:bg-emerald-50 rounded-lg transition"
+              className="rounded-lg p-2 transition hover:bg-emerald-50"
             >
-              <FiUser className="text-emerald-600 text-lg" />
+              <FiUser className="text-lg text-emerald-600" />
             </Link>
-            <button className="p-2 hover:bg-red-50 rounded-lg transition">
-              <FiLogOut className="text-red-500 text-lg" />
+            <button className="rounded-lg p-2 transition hover:bg-red-50">
+              <FiLogOut className="text-lg text-red-500" />
             </button>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main className="mx-auto max-w-7xl px-6 py-12">
         <div className="mb-10">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">
+          <h2 className="mb-2 text-3xl font-bold text-slate-900">
             Welcome back, Student!
           </h2>
           <p className="text-slate-600">Choose a subject to start your quiz</p>
         </div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredCourses.map((course, index) => (
             <Link
               key={course.id}
               href={`/quiz/${course.id}`}
-              className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+              className="group animate-fade-in-up relative overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div
-                className={`bg-gradient-to-br ${course.color} p-8 h-48 flex flex-col justify-between text-white relative overflow-hidden`}
+                className={`bg-gradient-to-br ${course.color} relative flex h-48 flex-col justify-between overflow-hidden p-8 text-white`}
               >
                 {/* Background decoration */}
-                <div className="absolute -right-8 -top-8 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-150" />
 
                 <div>
-                  <span className="text-5xl mb-2">{course.icon}</span>
-                  <h3 className="text-2xl font-bold mt-4">{course.name}</h3>
+                  <span className="mb-2 text-5xl">{course.icon}</span>
+                  <h3 className="mt-4 text-2xl font-bold">{course.name}</h3>
                 </div>
 
                 <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="mb-2 flex items-center justify-between">
                     <span className="text-sm font-medium">Progress</span>
                     <span className="text-sm font-bold">
                       {course.progress}%
                     </span>
                   </div>
-                  <div className="w-full bg-white/20 rounded-full h-2">
+                  <div className="h-2 w-full rounded-full bg-white/20">
                     <div
-                      className="bg-white rounded-full h-2 transition-all duration-300"
+                      className="h-2 rounded-full bg-white transition-all duration-300"
                       style={{ width: `${course.progress}%` }}
                     />
                   </div>
@@ -144,8 +144,8 @@ export default function StudentDashboard() {
               </div>
 
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-              <div className="absolute bottom-4 right-4 bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
+              <div className="absolute right-4 bottom-4 translate-y-2 transform rounded-lg bg-white px-4 py-2 font-semibold text-emerald-600 opacity-0 transition-opacity group-hover:translate-y-0 group-hover:opacity-100">
                 Start Quiz →
               </div>
             </Link>
@@ -154,8 +154,8 @@ export default function StudentDashboard() {
 
         {/* Empty State */}
         {filteredCourses.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-slate-500 text-lg">
+          <div className="py-16 text-center">
+            <p className="text-lg text-slate-500">
               No courses found matching "{searchQuery}"
             </p>
           </div>

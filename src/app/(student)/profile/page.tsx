@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import {
   FiUser,
   FiActivity,
@@ -13,12 +13,12 @@ import {
   FiX,
   FiTrendingUp,
   FiStar,
-} from "react-icons/fi"
-import Link from "next/link"
+} from "react-icons/fi";
+import Link from "next/link";
 
 export default function StudentProfile() {
-  const [activeTab, setActiveTab] = useState("personal")
-  const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [activeTab, setActiveTab] = useState("personal");
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const sidebarItems = [
     { id: "personal", label: "Personal Info", icon: FiUser },
@@ -27,71 +27,73 @@ export default function StudentProfile() {
     { id: "classes", label: "My Classes", icon: FiBook },
     { id: "requests", label: "Course Request", icon: FiFileText },
     { id: "certificates", label: "Certificates", icon: FiMail },
-  ]
+  ];
 
   const renderContent = () => {
     switch (activeTab) {
       case "personal":
-        return <PersonalInfoSection />
+        return <PersonalInfoSection />;
       case "analytics":
-        return <AnalyticsSection />
+        return <AnalyticsSection />;
       case "leaderboard":
-        return <LeaderboardSection />
+        return <LeaderboardSection />;
       case "classes":
-        return <ClassesSection />
+        return <ClassesSection />;
       case "requests":
-        return <RequestsSection />
+        return <RequestsSection />;
       case "certificates":
-        return <CertificatesSection />
+        return <CertificatesSection />;
       default:
-        return <PersonalInfoSection />
+        return <PersonalInfoSection />;
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       <div className="flex">
         {/* Sidebar */}
-        <div className={`${sidebarOpen ? "w-64" : "w-0"} transition-all duration-300 overflow-hidden`}>
-          <div className="h-screen bg-gradient-to-b from-emerald-600 to-emerald-700 text-white p-6 fixed w-64 overflow-y-auto">
-            <div className="flex items-center justify-between mb-8">
+        <div
+          className={`${sidebarOpen ? "w-64" : "w-0"} overflow-hidden transition-all duration-300`}
+        >
+          <div className="fixed h-screen w-64 overflow-y-auto bg-gradient-to-b from-emerald-600 to-emerald-700 p-6 text-white">
+            <div className="mb-8 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-emerald-600 font-bold text-lg">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-lg font-bold text-emerald-600">
                   Q
                 </div>
                 <h2 className="text-xl font-bold">QuizHub</h2>
               </div>
             </div>
 
-            <div className="bg-emerald-500/30 rounded-lg p-4 mb-8">
-              <p className="text-sm text-emerald-100 mb-1">Welcome Back!</p>
+            <div className="mb-8 rounded-lg bg-emerald-500/30 p-4">
+              <p className="mb-1 text-sm text-emerald-100">Welcome Back!</p>
               <p className="text-lg font-bold">John Doe</p>
             </div>
 
             <nav className="space-y-2">
               {sidebarItems.map((item) => {
-                const Icon = item.icon
+                const Icon = item.icon;
                 return (
                   <button
                     key={item.id}
                     onClick={() => setActiveTab(item.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
+                    className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 transition-all ${
                       activeTab === item.id
-                        ? "bg-white text-emerald-600 font-semibold shadow-lg"
+                        ? "bg-white font-semibold text-emerald-600 shadow-lg"
                         : "text-emerald-100 hover:bg-emerald-500/30"
                     }`}
                   >
                     <Icon className="text-lg" />
                     <span>{item.label}</span>
                   </button>
-                )
+                );
               })}
             </nav>
 
-            <div className="border-t border-emerald-500 mt-8 pt-8">
+            <div className="mt-8 border-t border-emerald-500 pt-8">
               <Link
                 href="/"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg text-emerald-100 hover:bg-emerald-500/30 transition-all w-full"
+                className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-emerald-100 transition-all hover:bg-emerald-500/30"
               >
                 <FiLogOut className="text-lg" />
                 <span>Logout</span>
@@ -103,11 +105,11 @@ export default function StudentProfile() {
         {/* Main Content */}
         <div className="flex-1">
           {/* Top Header */}
-          <header className="bg-white border-b border-emerald-100 shadow-sm sticky top-0 z-40">
-            <div className="px-6 py-4 flex items-center justify-between">
+          <header className="sticky top-0 z-40 border-b border-emerald-100 bg-white shadow-sm">
+            <div className="flex items-center justify-between px-6 py-4">
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="p-2 hover:bg-emerald-50 rounded-lg transition"
+                className="rounded-lg p-2 transition hover:bg-emerald-50"
               >
                 {sidebarOpen ? (
                   <FiX className="text-2xl text-emerald-600" />
@@ -115,8 +117,10 @@ export default function StudentProfile() {
                   <FiMenu className="text-2xl text-emerald-600" />
                 )}
               </button>
-              <h1 className="text-2xl font-bold text-slate-900">Student Profile</h1>
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full" />
+              <h1 className="text-2xl font-bold text-slate-900">
+                Student Profile
+              </h1>
+              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600" />
             </div>
           </header>
 
@@ -125,102 +129,121 @@ export default function StudentProfile() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Personal Info Section
 function PersonalInfoSection() {
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-xl shadow-lg p-8">
-        <div className="flex items-start gap-6 mb-8">
-          <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full" />
+      <div className="rounded-xl bg-white p-8 shadow-lg">
+        <div className="mb-8 flex items-start gap-6">
+          <div className="h-24 w-24 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600" />
           <div>
             <h2 className="text-3xl font-bold text-slate-900">John Doe</h2>
             <p className="text-slate-600">Student ID: STU-2024-001</p>
-            <p className="text-emerald-600 font-semibold mt-2">Active Member</p>
+            <p className="mt-2 font-semibold text-emerald-600">Active Member</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
-            <label className="block text-sm text-slate-600 mb-2">Full Name</label>
+            <label className="mb-2 block text-sm text-slate-600">
+              Full Name
+            </label>
             <input
               type="text"
               defaultValue="John Doe"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-2">Email</label>
+            <label className="mb-2 block text-sm text-slate-600">Email</label>
             <input
               type="email"
               defaultValue="john@example.com"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-2">Phone</label>
+            <label className="mb-2 block text-sm text-slate-600">Phone</label>
             <input
               type="tel"
               defaultValue="+1-234-567-8900"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-2">Date of Birth</label>
+            <label className="mb-2 block text-sm text-slate-600">
+              Date of Birth
+            </label>
             <input
               type="date"
               defaultValue="2005-01-15"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-2">School</label>
+            <label className="mb-2 block text-sm text-slate-600">School</label>
             <input
               type="text"
               defaultValue="Central High School"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-2">Grade</label>
+            <label className="mb-2 block text-sm text-slate-600">Grade</label>
             <input
               type="text"
               defaultValue="12th Grade"
-              className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              className="w-full rounded-lg border border-slate-200 px-4 py-2 focus:border-emerald-400 focus:outline-none"
             />
           </div>
         </div>
 
-        <button className="mt-8 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+        <button className="mt-8 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-600 px-8 py-3 font-semibold text-white transition hover:shadow-lg">
           Save Changes
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 // Analytics Section
 function AnalyticsSection() {
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
         {[
-          { label: "Quizzes Taken", value: "24", color: "from-blue-500 to-blue-600" },
-          { label: "Average Score", value: "78%", color: "from-emerald-500 to-emerald-600" },
-          { label: "Study Hours", value: "124h", color: "from-purple-500 to-purple-600" },
+          {
+            label: "Quizzes Taken",
+            value: "24",
+            color: "from-blue-500 to-blue-600",
+          },
+          {
+            label: "Average Score",
+            value: "78%",
+            color: "from-emerald-500 to-emerald-600",
+          },
+          {
+            label: "Study Hours",
+            value: "124h",
+            color: "from-purple-500 to-purple-600",
+          },
           { label: "Rank", value: "#15", color: "from-amber-500 to-amber-600" },
         ].map((stat, index) => (
-          <div key={index} className={`bg-gradient-to-br ${stat.color} text-white rounded-xl shadow-lg p-6`}>
-            <p className="text-sm text-white/80 mb-2">{stat.label}</p>
+          <div
+            key={index}
+            className={`bg-gradient-to-br ${stat.color} rounded-xl p-6 text-white shadow-lg`}
+          >
+            <p className="mb-2 text-sm text-white/80">{stat.label}</p>
             <p className="text-3xl font-bold">{stat.value}</p>
           </div>
         ))}
       </div>
 
-      <div className="bg-white rounded-xl shadow-lg p-8">
-        <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+      <div className="rounded-xl bg-white p-8 shadow-lg">
+        <h3 className="mb-6 flex items-center gap-2 text-xl font-bold text-slate-900">
           <FiTrendingUp className="text-emerald-600" />
           Subject Performance
         </h3>
@@ -233,13 +256,17 @@ function AnalyticsSection() {
             { subject: "English", score: 92 },
           ].map((item, index) => (
             <div key={index}>
-              <div className="flex justify-between mb-2">
-                <span className="font-semibold text-slate-900">{item.subject}</span>
-                <span className="text-emerald-600 font-bold">{item.score}%</span>
+              <div className="mb-2 flex justify-between">
+                <span className="font-semibold text-slate-900">
+                  {item.subject}
+                </span>
+                <span className="font-bold text-emerald-600">
+                  {item.score}%
+                </span>
               </div>
-              <div className="w-full bg-slate-200 rounded-full h-2">
+              <div className="h-2 w-full rounded-full bg-slate-200">
                 <div
-                  className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full h-2"
+                  className="h-2 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600"
                   style={{ width: `${item.score}%` }}
                 />
               </div>
@@ -248,14 +275,14 @@ function AnalyticsSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Leaderboard Section
 function LeaderboardSection() {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+    <div className="rounded-xl bg-white p-8 shadow-lg">
+      <h3 className="mb-6 flex items-center gap-2 text-xl font-bold text-slate-900">
         <FiAward className="text-emerald-600" />
         Top Students
       </h3>
@@ -263,10 +290,10 @@ function LeaderboardSection() {
         {[1, 2, 3, 4, 5].map((rank) => (
           <div
             key={rank}
-            className={`flex items-center gap-4 p-4 rounded-lg border-2 ${rank === 1 ? "border-emerald-200 bg-emerald-50" : "border-slate-200"}`}
+            className={`flex items-center gap-4 rounded-lg border-2 p-4 ${rank === 1 ? "border-emerald-200 bg-emerald-50" : "border-slate-200"}`}
           >
             <div
-              className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg ${
+              className={`flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold ${
                 rank === 1
                   ? "bg-yellow-400 text-yellow-900"
                   : rank === 2
@@ -280,57 +307,77 @@ function LeaderboardSection() {
             </div>
             <div className="flex-1">
               <p className="font-semibold text-slate-900">Student {rank}</p>
-              <p className="text-sm text-slate-600">Rank Score: {95 - rank * 5}%</p>
+              <p className="text-sm text-slate-600">
+                Rank Score: {95 - rank * 5}%
+              </p>
             </div>
-            <FiStar className="text-amber-500 text-xl" />
+            <FiStar className="text-xl text-amber-500" />
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 // Classes Section
 function ClassesSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       {[
         { name: "Advanced Mathematics", instructor: "Dr. Smith", members: 28 },
-        { name: "Physics Fundamentals", instructor: "Prof. Johnson", members: 32 },
+        {
+          name: "Physics Fundamentals",
+          instructor: "Prof. Johnson",
+          members: 32,
+        },
         { name: "Chemistry Lab", instructor: "Dr. Williams", members: 24 },
         { name: "Biology Essentials", instructor: "Prof. Brown", members: 30 },
       ].map((cls, index) => (
-        <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
-          <h3 className="text-lg font-bold text-slate-900 mb-2">{cls.name}</h3>
-          <p className="text-sm text-slate-600 mb-4">Instructor: {cls.instructor}</p>
-          <div className="flex items-center justify-between p-3 bg-emerald-50 rounded-lg">
+        <div
+          key={index}
+          className="rounded-xl bg-white p-6 shadow-lg transition hover:shadow-xl"
+        >
+          <h3 className="mb-2 text-lg font-bold text-slate-900">{cls.name}</h3>
+          <p className="mb-4 text-sm text-slate-600">
+            Instructor: {cls.instructor}
+          </p>
+          <div className="flex items-center justify-between rounded-lg bg-emerald-50 p-3">
             <span className="text-sm text-slate-600">Members</span>
-            <span className="text-lg font-bold text-emerald-600">{cls.members}</span>
+            <span className="text-lg font-bold text-emerald-600">
+              {cls.members}
+            </span>
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 // Requests Section
 function RequestsSection() {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className="text-xl font-bold text-slate-900 mb-6">Course Requests</h3>
+    <div className="rounded-xl bg-white p-8 shadow-lg">
+      <h3 className="mb-6 text-xl font-bold text-slate-900">Course Requests</h3>
       <div className="space-y-4">
         {[
           { course: "Advanced Python", status: "pending", date: "2024-01-15" },
           { course: "Web Development", status: "approved", date: "2024-01-10" },
-          { course: "Data Science 101", status: "rejected", date: "2024-01-05" },
+          {
+            course: "Data Science 101",
+            status: "rejected",
+            date: "2024-01-05",
+          },
         ].map((req, index) => (
-          <div key={index} className="flex items-center justify-between p-4 border border-slate-200 rounded-lg">
+          <div
+            key={index}
+            className="flex items-center justify-between rounded-lg border border-slate-200 p-4"
+          >
             <div>
               <p className="font-semibold text-slate-900">{req.course}</p>
               <p className="text-sm text-slate-600">Requested: {req.date}</p>
             </div>
             <span
-              className={`px-4 py-2 rounded-full font-semibold text-sm ${
+              className={`rounded-full px-4 py-2 text-sm font-semibold ${
                 req.status === "approved"
                   ? "bg-emerald-100 text-emerald-700"
                   : req.status === "rejected"
@@ -344,13 +391,13 @@ function RequestsSection() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 // Certificates Section
 function CertificatesSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       {[
         { name: "Mathematics Excellence", date: "2024-01-20", score: 95 },
         { name: "Physics Mastery", date: "2024-01-18", score: 88 },
@@ -358,16 +405,16 @@ function CertificatesSection() {
       ].map((cert, index) => (
         <div
           key={index}
-          className="bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-xl p-8 text-center hover:shadow-lg transition"
+          className="rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-yellow-50 p-8 text-center transition hover:shadow-lg"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-            <FiAward className="text-white text-2xl" />
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-yellow-500">
+            <FiAward className="text-2xl text-white" />
           </div>
-          <h3 className="text-lg font-bold text-slate-900 mb-2">{cert.name}</h3>
-          <p className="text-sm text-slate-600 mb-3">Awarded: {cert.date}</p>
+          <h3 className="mb-2 text-lg font-bold text-slate-900">{cert.name}</h3>
+          <p className="mb-3 text-sm text-slate-600">Awarded: {cert.date}</p>
           <p className="text-2xl font-bold text-amber-600">{cert.score}%</p>
         </div>
       ))}
     </div>
-  )
+  );
 }
