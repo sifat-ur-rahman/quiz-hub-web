@@ -68,8 +68,8 @@ function CreateAccountForm({
   };
   return (
     <div className="animate-fade-in-up">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-2">
+      <div className="mb-8 text-center">
+        <h2 className="mb-2 text-3xl font-bold text-slate-900">
           Create Your {userType === "student" ? "Student" : "Examiner"} Account
         </h2>
         <p className="text-slate-600">
@@ -79,17 +79,17 @@ function CreateAccountForm({
 
       <form
         onSubmit={handleBasicRegister}
-        className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-5 max-w-md mx-auto"
+        className="mx-auto max-w-md space-y-5 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
       >
         {error && (
-          <div className="bg-red-50 border-2 border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+          <div className="rounded-lg border-2 border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             {error}
           </div>
         )}
 
         {/* Full Name */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Full Name *
           </label>
           <input
@@ -98,14 +98,14 @@ function CreateAccountForm({
             value={formData.fullName}
             onChange={handleChange}
             placeholder="John Doe"
-            className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+            className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
             required
           />
         </div>
 
         {/* Email */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Email Address *
           </label>
           <input
@@ -114,14 +114,14 @@ function CreateAccountForm({
             value={formData.email}
             onChange={handleChange}
             placeholder="you@example.com"
-            className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+            className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
             required
           />
         </div>
 
         {/* Phone */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Phone Number *
           </label>
           <input
@@ -130,14 +130,14 @@ function CreateAccountForm({
             value={formData.phone}
             onChange={handleChange}
             placeholder="+1 (555) 000-0000"
-            className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+            className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
             required
           />
         </div>
 
         {/* Password */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Password *
           </label>
           <div className="relative">
@@ -147,13 +147,13 @@ function CreateAccountForm({
               value={formData.password}
               onChange={handleChange}
               placeholder="Min. 6 characters"
-              className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+              className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
               required
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-3 text-slate-600 hover:text-slate-900"
+              className="absolute top-3 right-3 text-slate-600 hover:text-slate-900"
             >
               {showPassword ? <FiEye size={20} /> : <FiEyeOff size={20} />}
             </button>
@@ -162,7 +162,7 @@ function CreateAccountForm({
 
         {/* Confirm Password */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Confirm Password *
           </label>
           <input
@@ -171,7 +171,7 @@ function CreateAccountForm({
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirm your password"
-            className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-emerald-500 transition-colors"
+            className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 transition-colors focus:border-emerald-500 focus:outline-none"
             required
           />
         </div>
@@ -181,14 +181,14 @@ function CreateAccountForm({
           <button
             type="button"
             onClick={handleBack}
-            className="flex-1 bg-slate-200 text-slate-700 font-semibold py-3 rounded-lg hover:bg-slate-300 transition-all"
+            className="flex-1 rounded-lg bg-slate-200 py-3 font-semibold text-slate-700 transition-all hover:bg-slate-300"
           >
             Back
           </button>
           <button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-linear-to-r from-emerald-500 to-teal-500 text-white font-semibold py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-linear-to-r from-emerald-500 to-teal-500 py-3 font-semibold text-white transition-all hover:shadow-lg disabled:opacity-70"
           >
             {loading ? "Creating..." : "Continue"}
             {!loading && <FiArrowRight size={18} />}
